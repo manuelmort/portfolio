@@ -6,7 +6,10 @@ export default class NavigationBar extends React.Component {
             <div class="container mx-auto">
             <nav class="flex justify-between mx-auto flex-wrap m-30 p-6" style={{maxWidth:"700px"}}>
                 <div class="flex items-center  text-white">
-                    <a  href="/" class="font-semibold text-xl tracking-tight">Manuel Morteo</a>
+                    <a  
+                        href="/" class="font-semibold text-xl tracking-tight 
+                        hover:underline underline-offset-4">
+                        Manuel Morteo</a>
                 </div>
                 <div class="  lg:flex lg:items-center lg:w-auto">
                     <div class="text-sm lg:flex-grow">
