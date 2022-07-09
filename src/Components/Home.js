@@ -73,7 +73,7 @@ export default function Home() {
                         <button href = "https://github.com/manuelmort" 
                         class="flex hover:bg-teal-400 hover:bg-opacity-30 hover:text-pink-300 rounded-md p-1">
                             <span class="p-1  text-zing-300 bg-transparent">
-                                <AiOutlineGithub/>
+                                <AiOutlineGithub class="bg-transparent"/>
                             </span>@manuelmort
                         </button>
                     </li>
@@ -81,7 +81,7 @@ export default function Home() {
                         <button href = "https://www.instagram.com/manuel.morteo" 
                         class="flex hover:bg-teal-400 hover:bg-opacity-30 hover:text-pink-300 rounded-md p-1">
                             <span class="p-1  text-zing-300 bg-transparent">
-                                <AiOutlineInstagram/>
+                                <AiOutlineInstagram class="bg-transparent"/>
                             </span>@manuel.morteo
                         </button>
                     </li>
@@ -89,7 +89,7 @@ export default function Home() {
                         <button href = "https://www.instagram.com/manuel.morteo" 
                         class="flex hover:bg-teal-400 hover:bg-opacity-30 hover:text-pink-300 rounded-md p-1">
                             <span class="p-1  text-zing-300 bg-transparent">
-                                <AiOutlineYoutube/>
+                                <AiOutlineYoutube class="bg-transparent"/>
                             </span>@Bluerare
                         </button>
                     </li>

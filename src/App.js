@@ -10,6 +10,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
 import {Routes, Route} from 'react-router-dom'
+import Footer from "./Components/Footer";
 
 
 
@@ -50,6 +51,8 @@ function App() {
 
       </Routes>
     </div>
+    <Footer/>
+    
     
       
     </div>
