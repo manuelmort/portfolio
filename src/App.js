@@ -3,10 +3,9 @@ import Home from "./Components/Home";
 import Works from "./Components/Works";
 import Posts from "./Components/Posts";
 import NavigationBar from "./Components/NavigationBar";
-import { useEffect } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { useLoader } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import {  OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
 import {Routes, Route} from 'react-router-dom'
@@ -33,7 +32,7 @@ function App() {
       <div>
         <div>
         </div>
-        <div class="container  mx-auto" style={{ position: "relative",width: 500, height: 350 }}>
+        <div class="lg:container  text-center  mx-auto" style={{ position: "relative",maxWidth: 500, height: 350 }}>
             <Canvas  
                 camera={{fov:1.5,far:200,near:2,position: [50, 10, 50]}}>
                 <Suspense fallback={null}>

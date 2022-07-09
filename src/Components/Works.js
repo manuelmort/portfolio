@@ -4,13 +4,13 @@ export default class Works extends React.Component {
     
     render() {
         return(
-            <div class= "container mx-auto" style={{maxWidth:"700px"}}>
+            <div class= "container mx-auto p-5 lg:p-0" style={{maxWidth:"700px"}}>
                 <p class="text-xl font-semibold underline text-zinc-300 pb-5">Works</p>
-                <div class="container mx-auto grid grid-cols-2 gap-4">
+                <div class="container mx-auto grid lg:grid-cols-2 ga-4">
                     <div class = "container mx-auto">
-                        <a target="_blank" href="https://www.cyberdyne-vespa.org">
+                        <a target="_blank" rel="noreferrer" href="https://www.cyberdyne-vespa.org">
                             <div>
-                                <img class=" mx-auto rounded-lg" src="./csusvespa.png" style={{minHeight:"160px",maxWidth:"300px"}}/>
+                                <img alt="vespa logo" class=" mx-auto rounded-lg" src="./csusvespa.png" style={{minHeight:"160px",maxWidth:"300px"}}/>
                             </div>
                             <p class="text-zinc-300 text-center text-lg p-3">CyberDyne Vespa</p>
                             <p class="text-zinc-300 text-center mx-auto" style={{maxWidth:"300px"}}>A brochure website featuring a ECS discord club that unites all 
@@ -18,9 +18,9 @@ export default class Works extends React.Component {
                         </a>
                     </div>
                     <div>
-                        <a target="_blank" href="http://hidefromteamo.herokuapp.com/">
+                        <a target="_blank" rel="noreferrer"  href="http://hidefromteamo.herokuapp.com/">
                             <div>
-                                <img class="mx-auto rounded-lg" src="./tftSite.png" style={{maxHeight:"160px", minWidth:"300px",maxWidth:"300px"}}/>
+                                <img class="mx-auto rounded-lg" alt="hidefromteamo app" src="./tftSite.png" style={{maxHeight:"160px", minWidth:"300px",maxWidth:"300px"}}/>
                             </div>
                             <p class="text-zinc-300  text-center text-lg p-3">TFT Rank LeaderBoard</p>
                             <p class="text-zinc-300 mx-auto text-center" style={{maxWidth:"300px"}}>Displays rank of a group of people 
