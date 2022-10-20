@@ -1,10 +1,60 @@
 import React from "react";
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/all";
 export default class Works extends React.Component {
+    componentDidMount() {
+   
+
+
+        //gsap is fucking amazing!
+        gsap.registerPlugin(ScrollTrigger);
+        //reveal
+        gsap.utils.toArray(".revealUp").forEach(function (elem) {
+        ScrollTrigger.create({
+            trigger: elem,
+            start: "top 80%",
+            end: "bottom 10%",
+            markers: false,
+            onEnter: function () {
+            gsap.fromTo(
+                elem,
+                { y: 100, autoAlpha: 0 },
+                {
+                duration: 1.25,
+                y: 0,
+                autoAlpha: 1,
+                ease: "back",
+                overwrite: "auto"
+                }
+            );
+            },
+            onLeave: function () {
+            gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+            },
+            onEnterBack: function () {
+            gsap.fromTo(
+                elem,
+                { y: -100, autoAlpha: 0 },
+                {
+                duration: 1.25,
+                y: 0,
+                autoAlpha: 1,
+                ease: "back",
+                overwrite: "auto"
+                }
+            );
+            },
+            onLeaveBack: function () {
+            gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+            }
+        });
+        });
+
+    }
     
     render() {
         return(
-            <div class= "container mx-auto p-5 lg:p-0" style={{maxWidth:"700px"}}>
+            <div class= "container mx-auto p-5 lg:p-0 revealUp" style={{maxWidth:"700px"}}>
                 <p class="text-xl font-semibold underline text-zinc-300 pb-5">Works</p>
                 <div class="container mx-auto grid lg:grid-cols-2 ga-4">
                     <div class = "container mx-auto">
@@ -27,18 +77,14 @@ export default class Works extends React.Component {
                             and orders the leaderboard by rank</p>
                         </a>
                     </div>
-                    <div>
-                        <div class="">
-                           <p class="bg-teal-800 bg-opacity-10 text-zinc-300 rounded-lg text-center mx-auto p-5" 
-                                style={{minHeight:"150px",maxWidth:"300px"}}>
-                                Coming Soon 
-                              
-                            </p>
-                        </div>
-                        <p class="text-zinc-300 text-center text-lg p-3">ECS Joint Council Website</p>
-                        <p class="text-zinc-300 mx-auto text-center" >
-                            A brochure website for the ECS joint Council that links
-                        </p>
+                    <div class="mt-5">
+                        <a target="_blank" rel="noreferrer"  href="https://ecsjc.org">
+                            <div>
+                                <img class="mx-auto rounded-lg" alt="hidefromteamo app" src="./ECSJC.png" style={{maxHeight:"160px", minWidth:"300px",maxWidth:"300px"}}/>
+                            </div>
+                            <p class="text-zinc-300  text-center text-lg p-3">ECSJC</p>
+                            <p class="text-zinc-300 mx-auto text-left" style={{maxWidth:"300px"}}>Sac State Computer and Engineering Joint Council Website</p>
+                        </a>
                     </div>
                 </div>
             </div>

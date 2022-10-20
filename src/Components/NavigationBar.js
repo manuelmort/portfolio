@@ -1,32 +1,34 @@
 import React from "react";
-
+import "./Navbar.css"
 export default class NavigationBar extends React.Component {
+
+    handleClick() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+        //I've also included this in index.htmlfile
+        // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    }
     render() {
         return(
             <div class="container mx-auto">
-            <nav class="flex justify-between mx-auto flex-wrap m-30 p-6" style={{maxWidth:"700px"}}>
-                <div class="flex items-center  text-white">
-                    <a  
-                        href="/" class="font-semibold text-xl tracking-tight 
-                        hover:underline underline-offset-4">
-                        Manuel Morteo</a>
-                </div>
-                <div class="  lg:flex lg:items-center lg:w-auto">
-                    <div class="text-sm lg:flex-grow">
-                        <a href="/works" class="block mt-4 p-2 rounded-md lg:inline-block hover:text-pink-300 hover:bg-opacity-10 hover:bg-teal-300 lg:mt-0 text-white">
-                            Works
-                        </a>
-                        <a href="/posts" class="block mt-4 p-2 rounded-md lg:inline-block hover:text-pink-300 hover:bg-opacity-10 hover:bg-teal-300 lg:mt-0 text-white">
-                            Posts
-                        </a>
-                        <a target="_blank" href="https://github.com/manuelmort" 
-                            class="block mt-4 p-2 rounded-md lg:inline-block hover:text-pink-300 hover:bg-opacity-10 hover:bg-teal-300 lg:mt-0 text-white">
-                            Github 
-                        </a>
-                    </div>
-                    
-                </div>
-                </nav> 
+
+            <div class="topnav text-white text-lg mt-5 " id="myTopnav" style={{maxWidth:"700px"}}>
+                <a href="/home" class="active">Manuel Morteo</a>
+                <a href="/works" class=" hover:bg-teal-400 hover:bg-opacity-30 rounded-md hover:text-pink-300  hover:underline hover:underline-offset-8">Works</a>
+                <a href="/posts" 
+                    class="hover:bg-teal-400 hover:bg-opacity-30 rounded-md hover:text-pink-300  hover:underline hover:underline-offset-8">
+                        Posts
+                </a>
+                <a href="https://github.com/manuelmort" class="hover:bg-teal-400 hover:bg-opacity-30 rounded-md hover:text-pink-300  hover:underline hover:underline-offset-8">Github</a>
+                <a href="javascript:void(0);" class="icon" onClick={this.handleClick}>
+                    <i class="fa fa-bars"></i>
+            </a>
+            </div>
             </div>
         
         )
