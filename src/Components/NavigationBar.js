@@ -15,16 +15,16 @@ export default class NavigationBar extends React.Component {
     }
     render() {
         return(
-            <div class="container mx-auto">
+            <div class="mx-auto pt-5 pb-10 ">
 
-            <div class="topnav text-white text-lg mt-5 " id="myTopnav" style={{maxWidth:"700px"}}>
-                <a href="/home" class="active">Manuel Morteo</a>
-                <a href="/works" class=" hover:bg-teal-400 hover:bg-opacity-30 rounded-md hover:text-pink-300  hover:underline hover:underline-offset-8">Works</a>
+            <div class="topnav text-white text-lg text-center  mx-auto " id="myTopnav" style={{maxWidth:"700px"}}>
+                <a href="/home" class="active hover:underline-offset-2 mr-52">Manuel Morteo</a>
+                <a href="/works" class=" hover:bg-teal-400/30 hover:bg-opacity-30 rounded-md hover:text-pink-200  hover:underline hover:underline-offset-8 p-5">Works</a>
                 <a href="/posts" 
-                    class="hover:bg-teal-400 hover:bg-opacity-30 rounded-md hover:text-pink-300  hover:underline hover:underline-offset-8">
+                    class="hover:bg-teal-400  hover:bg-opacity-30 rounded-md hover:text-pink-200  hover:underline hover:underline-offset-8 p-5">
                         Posts
                 </a>
-                <a href="https://github.com/manuelmort" class="hover:bg-teal-400 hover:bg-opacity-30 rounded-md hover:text-pink-300  hover:underline hover:underline-offset-8">Github</a>
+                <a href="https://github.com/manuelmort" class="hover:bg-teal-400 hover:bg-opacity-30 rounded-md hover:text-pink-300 p-5 hover:underline hover:underline-offset-8">Github</a>
                 <a href="javascript:void(0);" class="icon" onClick={this.handleClick}>
                     <i class="fa fa-bars"></i>
             </a>

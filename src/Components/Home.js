@@ -64,14 +64,14 @@ export default class Home extends React.Component {
             <div>
                 <div class="container lg:mx-auto lg:text-center lg:rounded-full revealUp" >
                     <p class="text-zinc-300 mx-auto bg-slate-800 bg-opacity-80 text-center rounded-md p-3" style={{maxWidth:"600px"}}>
-                        Hi, I'm a student working with web development and robotics
+                        Hi, I'm a student working with Embedded Systems and Robotics
                     </p>
                 </div>
             
                 <div class="mx-auto grid grid-rows-1 grid-flow-col mt-6 revealUp" style={{maxWidth:"500px"}}>
                     <div class="text-center text-zinc-300">
                         <p class="text-3xl font-semibold">Manuel Morteo</p>
-                        <p>Student/Developer/Designer</p>
+                        <p>Student/Crafter/Interstellar Advocate</p>
                     </div>
                     <div>
                         <img alt="Manuel Morteo" class =" mx-auto w-24 h-24 rounded-full" src="./profilepic.png"></img>
@@ -79,14 +79,14 @@ export default class Home extends React.Component {
                 </div>
                 <div class="container lg:mx-auto p-5 lg:p-0 revealUp" style={{maxWidth:"600px"}} >
                     <p class="text-zinc-300 underline">Work and School</p>
-                    <p class="text-zinc-300 text-center p-3">Manuel(Manny) is a student pursing a bachelors of science in computer engineering at Sacramento State University with a passion of building, automating and discovering how things work in our tech advancing world.
+                    <p class="text-zinc-300 text-left p-3">Manny is a student pursing a bachelors of science in computer engineering at Sacramento State University with a passion of building, automating and discovering how things work in our tech advancing world.
                     </p>
                     
                 </div>
-                <div className="text-center mx-auto revealUp">
+                <div className="text-center mx-auto ">
                         <button class =" bg-teal-400 rounded-md text-zinc-800 p-2">My Portfolio</button>
                 </div>
-                <div class="container mx-auto revealUp" style={{maxWidth:"600px"}}>
+                <div class="container mx-auto " style={{maxWidth:"600px"}}>
                     <p class="text-zinc-300 underline pb-3 p-5 lg:p-0">Bio</p>
                     <div class="pb-5 p-5 lg:p-0">
                     <p class="text-zinc-300">
@@ -94,11 +94,15 @@ export default class Home extends React.Component {
                             <p class="">Born in Sacramento, CA</p>
                         </p>
                         <p class="text-zinc-300 pt-3">
-                            <span class ="font-semibold">2021-Present</span> 
+                            <span class ="font-semibold">2021 - Present</span> 
                             <p class="">Student Tech Services at Visions In Education</p>
                         </p>
                         <p class="text-zinc-300 pt-3">
-                            <span class ="font-semibold">2018-2023</span> 
+                            <span class ="font-semibold">Summer 2023</span> 
+                            <p class="">Intern at Ebara Technologies</p>
+                        </p>
+                        <p class="text-zinc-300 pt-3">
+                            <span class ="font-semibold">2019- Spring 2024</span> 
                             <p class="">B.S. Computer Engineering at California State University Sacramento</p>
                         </p>
                     </div>
@@ -107,7 +111,7 @@ export default class Home extends React.Component {
 
 
                 </div>
-                <div class="container mx-auto p-5 lg:p-0 revealUp" style={{maxWidth:"600px"}}>
+                <div class="container mx-auto p-5 mt-10 lg:p-0 " style={{maxWidth:"600px"}}>
                     <p class="flex text-zinc-300 underline">
                         What I love to do <span class="p-1  text-teal-400 bg-transparent"><GiTechnoHeart/>
                         </span></p>
@@ -117,7 +121,7 @@ export default class Home extends React.Component {
 
 
                 </div>
-                <div class="container mx-auto p-5 lg:p-0 revealUp " style={{maxWidth:"600px"}}>
+                <div class="container mx-auto p-5 lg:p-0  " style={{maxWidth:"600px"}}>
                     <p class="text-zinc-300 underline">On the web</p>
                     <ul class="list-none ml-3 m-3">
 
