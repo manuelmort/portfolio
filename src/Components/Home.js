@@ -6,7 +6,23 @@ import { AiOutlineGithub
 import { GiTechnoHeart } from "react-icons/gi"
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Canvas } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { Suspense } from "react";
 
+const Model = () => {
+    var gltf = useLoader(GLTFLoader, "./MannyObject.glb");
+  
+    gltf.scene.position.y = -0.2;//jesus christ this moves the object's position within <Canvas/> 
+  
+    return (
+      <>
+        <primitive object={gltf.scene} scale={0.5} />
+      </>
+    );
+  };
 
 export default class Home extends React.Component {
     componentDidMount() {
@@ -62,6 +78,17 @@ export default class Home extends React.Component {
     return (
         <div class="">
             <div>
+            <div className="lg:container   mb-10 rounded-xl text-center mx-auto" style={{ position: "relative", maxWidth: 500, height: 400 }}>
+            <Canvas 
+                camera={{ fov:0.6, far: 200, near: 0.1, position: [30, 50, 30] }}
+            >
+                <Suspense fallback={null}>
+                <ambientLight intensity={0.7} />
+                <Model />
+                <OrbitControls autoRotate minPolarAngle={Math.PI / 2.6} maxPolarAngle={Math.PI / 2.6} />
+                </Suspense>
+            </Canvas>
+            </div>
                 <div class="container lg:mx-auto lg:text-center lg:rounded-full revealUp" >
                     <p class="text-zinc-300 mx-auto bg-slate-800 bg-opacity-80 text-center rounded-md p-3" style={{maxWidth:"600px"}}>
                         Hi, I'm a student working with Embedded Systems and Robotics

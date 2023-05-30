@@ -31,22 +31,14 @@ function App() {
       <div>
         <div>
         </div>
-        <div className="lg:container border-4 border-teal-200/90  mb-10 rounded-xl text-center mx-auto" style={{ position: "relative", maxWidth: 500, height: 400 }}>
-          <Canvas 
-            camera={{ fov:0.6, far: 200, near: 0.1, position: [30, 50, 30] }}
-          >
-            <Suspense fallback={null}>
-              <ambientLight intensity={0.7} />
-              <Model />
-              <OrbitControls autoRotate minPolarAngle={Math.PI / 2.6} maxPolarAngle={Math.PI / 2.6} />
-            </Suspense>
-          </Canvas>
-        </div>
+
         <Routes>
           <Route path='/' exact element={<Home />} />
           <Route path='/home' exact element={<Home />} />
           <Route path='/works' exact element={<Works />} />
           <Route path='/posts' exact element={<Posts />} />
+          <Route path='/twolinkplanar' exact element={<Posts />} />
+
         </Routes>
       </div>
       <Footer />

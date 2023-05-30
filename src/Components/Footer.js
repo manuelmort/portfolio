@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
                     
 
                     <div class="bg-transparent mx-auto text-center p-5">
-                        <p class="bg-transparent text-gray-500 mx-auto">© 2022 Manuel Morteo
+                        <p class="bg-transparent text-gray-500 mx-auto">© 2023 Manuel Morteo
                         </p>
                         
                     </div>
